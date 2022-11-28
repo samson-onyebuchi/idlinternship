@@ -1,5 +1,0 @@
-africastalking==1.2.4
-Flask==2.2.2
-Flask-Cors==3.0.10
-xlrd==1.2.0
-xlutils==2.0.0
