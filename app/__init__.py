@@ -14,4 +14,4 @@ api = Api(app)
 CORS(app)
 
 
-from app import error, q4
+from app import error, ussdbankapp
