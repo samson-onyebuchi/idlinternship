@@ -9,6 +9,6 @@ class Config(object):
 BASE_URI = os.environ.get('BASE_URI') 
 SAFEPAY_URI = os.environ.get('SAFEPAY_URI') 
 API_KEY = os.environ.get('API_KEY') 
-MONGO_URI = os.environ.get('MONGO_URI') 
+#MONGO_URI = os.environ.get('MONGO_URI') 
 USSD_username = os.environ.get('USSD_username') 
 USSD_api_key = os.environ.get('USSD_api_key') 
