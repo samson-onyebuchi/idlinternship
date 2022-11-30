@@ -1,28 +1,30 @@
 def main():
-    amount = input("Enter the amount you want to pay: ")
-    duration = input("Enter duration: ")
-    service = amount_and_duration(amount,duration)
-    print (f"Your charge for #{amount} for {duration} is {service}")
+    try:
+        amount = int(input("Enter the amount you want to pay: "))
+        duration = int(input("Enter duration: "))
+        service = amount_and_duration(amount,duration)
+        charge = round(service)
+        print (f"Your charge of #{amount} for {duration} month is {str(charge)}")
+
+
+    except ValueError as ve:
+        print(f"{ve} is not accepted")
+
 
 def amount_and_duration(amount, duration):
-    if duration == "12" and amount == 12000:
-        service_charge = "#200"
+    price = 200/12
+    a_month = 1000
+    
+    if duration <= 24  and  amount <= 24000 and amount == a_month * duration:
+        service_charge = duration * price
 
-    elif duration == "6" and amount == 6000:
-        service_charge = "#100"
-
-    elif duration == "3" and amount == 3000:
-        service_charge = "50"
-
-    elif duration == "1" and amount == 1000:
-        service_charge = "25"
-
-    elif duration == "12" and amount == 50000:
-        service_charge = "300"
+    elif amount == 50000 and duration == 12:
+        service_charge = 300
 
     else:
-        service_charge = None
+        service_charge = "Not in the service range"  
 
-    return service_charge
+    return service_charge      
+
 
 main()
